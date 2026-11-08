@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="VIBE·DSF — rendered, scored, shipped">
-  <title>VIBE·DSF — automated knowledge video pipeline</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="VIBE·FLOW — rendered, scored, shipped">
+  <title>VIBE·FLOW — automated knowledge video pipeline</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#141026"/>
@@ -20,7 +20,7 @@
   <circle cx="218" cy="278" r="10" fill="#E8A87C"/>
   <path d="M152 322 H192" stroke="#E8A87C" stroke-width="4" stroke-linecap="round"/>
 
-  <text x="320" y="270" fill="#EAEAF2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="4">VIBE<tspan fill="#E8A87C">·</tspan>DSF</text>
+  <text x="320" y="270" fill="#EAEAF2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="4">VIBE<tspan fill="#E8A87C">·</tspan>FLOW</text>
   <text x="324" y="320" fill="#8A8AA0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="500" letter-spacing="6">KNOWLEDGE VIDEO PIPELINE</text>
 
   <text x="120" y="450" fill="#EAEAF2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="60" font-weight="700">Rendered. Scored. Shipped.</text>

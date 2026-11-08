@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="brand/logo.svg" width="420" alt="VIBE·DSF — knowledge video pipeline"/>
+<img src="brand/logo.svg" width="420" alt="VIBE·FLOW — knowledge video pipeline"/>
 
 **给个人创作者的知识视频流水线 · 不过 QA 闸不出片**
 
-[展示站点](site/index.html) · [English](README.en.md) · **v1.8.0** · [更新日志](CHANGELOG.md) · [MVP 定义](docs/24-MVP.md) · [升级计划](docs/25-ROADMAP.md) · [对外定位](docs/22-COMMERCIAL.md)
+[展示站点](site/index.html) · [English](README.en.md) · **v1.9.0** · [更新日志](CHANGELOG.md) · [MVP 定义](docs/24-MVP.md) · [升级计划](docs/25-ROADMAP.md) · [对外定位](docs/22-COMMERCIAL.md)
 
 `免费 · MIT` · `QA ≥ 8 硬门禁` · `零付费依赖` · `自托管`
 
@@ -12,7 +12,7 @@
 
 ---
 
-# VIBE·DSF
+# VIBE·FLOW
 
 > 我们把一句话主题变成可发布的 1080p 知识视频：画面由代码绘制，音频确定性合成，
 > 逐帧渲染后由**像素级 QA 门禁**验收——不过线不放行。
@@ -111,6 +111,11 @@ powershell -File pipeline\run_all.ps1 -Project projects\demo-hook-compound -Skip
 依赖：Python 3.10+（`numpy` / `pillow` / `edge-tts`）、Node 20+、本机 Chrome、ffmpeg。
 不需要 GPU，也不需要付费连接器。
 
+> **自定义模型接口**：主模型不再锁死 DeepSeek-Flash。复制 `.env.example` 为 `.env`，
+> 填 `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` 即可接入绝大多数「可识别图像」的文本模型
+> （OpenAI 兼容视觉模型走 OpenAI→Anthropic 网关，如 litellm / one-api）。
+> `scripts/env.ps1` 会把 `.env` 注入本工具链。详见 `.env.example`。
+
 <details>
 <summary>分步命令（需要手动控制某个阶段时）</summary>
 
@@ -152,7 +157,7 @@ node pipeline\review.mjs --project projects\demo-hook-compound
 | demo-hook-compound | SCENE-WRITER 全自动 + 旁白 + 音效 | 11.43s | 8.8 |
 | paper-shannon1948 | PAPER2VIDEO 论文科普 | 23.81s | 9.5 |
 | paper-shannon-deep | PAPER2VIDEO 章节化长片 | 180s | 9.2 |
-| project-vibe-dsf | PROJECT2VIDEO 项目自举片 | 50s | 9.1 |
+| project-vibeflow | PROJECT2VIDEO 项目自举片 | 50s | 9.1 |
 
 五条都在**同一条主链**上，只是输入源与片长不同（8–180s）——不是五条产品线。
 分数来自各片实际渲染帧的 `qa.json`（短片在 v2/v3/v4 口径下逐项等价）。

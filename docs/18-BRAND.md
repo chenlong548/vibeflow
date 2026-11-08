@@ -9,7 +9,7 @@
 
 ```jsonc
 {
-  "brand": { "watermark": "@VIBE·DSF" },     // 账号水印（plan 缺省时自动回落到这里）
+  "brand": { "watermark": "@VIBE·FLOW" },     // 账号水印（plan 缺省时自动回落到这里）
   "default_palette": "deep-space",           // plan 什么都没给时用这套
   "palettes": {
     "deep-space": { "style": "...", "pattern": "dots", "bg_in": "...", "accent": "...", ... },
@@ -33,7 +33,7 @@ watermark：meta.watermark  >  brand.watermark
 | 名 | 来源 | QA | 语义 |
 |---|---|---|---|
 | `deep-space` | demo-hook-entropy / paper-shannon-deep | 9.1 / 9.2 | 深空冷底 + 唯一暖橙，知识片主战场 |
-| `paper` | project-vibe-dsf | 9.1 | 独立站设计令牌：暖白纸面 + deep teal + 暗终端证据窗 |
+| `paper` | project-vibeflow | 9.1 | 独立站设计令牌：暖白纸面 + deep teal + 暗终端证据窗 |
 
 **收编纪律**：新调色先用内联 palette 出片实测，QA 过闸后把整套值（含 style/pattern）
 收进 `palettes`，并在 `_from` 字段记出处。库只放验证过的——引用即安全。

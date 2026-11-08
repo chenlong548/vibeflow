@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-command MVP acceptance check for VIBE-DSF.
+"""One-command MVP acceptance check for VIBE·FLOW.
 
 Runs the active-maintenance checks WITHOUT Chrome, ffmpeg, audio files or
 rendered frames. The same command is used locally and in CI, so the two never
@@ -171,7 +171,7 @@ def check_assemble() -> None:
 
 
 def main() -> int:
-    print("=== VIBE-DSF MVP acceptance ===", flush=True)
+    print("=== VIBE·FLOW MVP acceptance ===", flush=True)
     check_version()
     check_core_files()
     run("python-syntax", [PY, "-m", "compileall", "-q",

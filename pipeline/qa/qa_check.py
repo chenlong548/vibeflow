@@ -57,7 +57,7 @@ try:
 except Exception:
     pass
 
-# ---- v4 边缘检测参数（校准自 demo-hook-compound 深底 / project-vibe-dsf 浅底，见 docs/20）----
+# ---- v4 边缘检测参数（校准自 demo-hook-compound 深底 / project-vibeflow 浅底，见 docs/20）----
 EDGE_BAND = 0.025     # 安全区：四边各 2.5%
 EDGE_DELTA = 96.0     # 相对背景亮度差：超过才算"不像背景"
 EDGE_AREA = 0.003     # 边带内异常像素占比门槛（0.3% ≈ 620px @1080p）

@@ -33,9 +33,9 @@
 | `flow-pipe` | 节点链管道（通信模型/流程） | anchor, reason | 9.2/10 @ paper-shannon-deep |
 | `text-points` | 要点逐条点亮（下划线+巡游光带） | reason, anchor | 9.2/10 @ paper-shannon-deep |
 | `timeline` | 年份轴（扫掠游标+呼吸环） | anchor, turn, land | 9.2/10 @ paper-shannon-deep |
-| `feature-cards` | 编辑部式特性卡（白卡+teal 顶条+巡游光带） | anchor, reason | 8.5/10 @ project-vibe-dsf |
-| `terminal-window` | 终端证据窗（暗面板+逐字敲入+扫描带+进度条） | reason, turn | 8.5/10 @ project-vibe-dsf |
-| `repo-card` | 收尾卡（owner/name+星数+安装命令呼吸描边） | land | 8.5/10 @ project-vibe-dsf |
+| `feature-cards` | 编辑部式特性卡（白卡+teal 顶条+巡游光带） | anchor, reason | 8.5/10 @ project-vibeflow |
+| `terminal-window` | 终端证据窗（暗面板+逐字敲入+扫描带+进度条） | reason, turn | 8.5/10 @ project-vibeflow |
+| `repo-card` | 收尾卡（owner/name+星数+安装命令呼吸描边） | land | 8.5/10 @ project-vibeflow |
 
 > **运动源铁律（2026-11-06 QA 实测沉淀）**：1080p30 下静止判定线 = 每帧变化像素 ≥0.35%
 > （~7.2k px，|亮度差|>8）。3px 细线/微脉冲**没有面积**，怎么动都凑不够；长场景必须配

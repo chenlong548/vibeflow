@@ -1,7 +1,7 @@
 {
   "meta": {
-    "repo": "chenlong548/vibe-dsf",
-    "title": "vibe-dsf · 自动化知识视频流水线",
+    "repo": "chenlong548/vibeflow",
+    "title": "vibeflow · 自动化知识视频流水线",
     "one_liner": "自动化知识视频流水线：一句话主题到过闸成片",
     "audience": "想日更知识区视频的创作者与团队",
     "language": "JavaScript · Python · PowerShell",
@@ -48,7 +48,7 @@
   ],
   "quickstart": {
     "install": [
-      "git clone https://github.com/chenlong548/vibe-dsf",
+      "git clone https://github.com/chenlong548/vibeflow",
       "pwsh pipeline/run_all.ps1 -Topic \"一句话主题\""
     ],
     "first_output": "[plan] 11 组检查 → PASS / [render] 0.13 秒/帧 / [qa] avg 9.5/10 → PASS / [mux] final.mp4",
@@ -75,7 +75,7 @@
     "BGM 是程序合成的氛围电子，不是编曲"
   ],
   "cta": {
-    "repo_url": "https://github.com/chenlong548/vibe-dsf",
-    "install_short": "git clone github.com/chenlong548/vibe-dsf"
+    "repo_url": "https://github.com/chenlong548/vibeflow",
+    "install_short": "git clone github.com/chenlong548/vibeflow"
   }
 }

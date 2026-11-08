@@ -1,4 +1,4 @@
-# VIBE·DSF 品牌规范
+# VIBE·FLOW 品牌规范
 
 > 这一层是**对外包装的单一真相**：站点、README、样片水印、对外材料都从这里取名称与色值。
 > 视觉令牌与 `pipeline/palette.json` 的 `deep-space`（QA 9.1 / 9.2 过闸配色）逐项一致，
@@ -8,10 +8,10 @@
 
 | 场景 | 写法 |
 |---|---|
-| 产品正式名 | **VIBE·DSF**（中点 U+00B7，全大写） |
-| 画面水印 | `@VIBE·DSF`（`palette.json → brand.watermark`） |
-| 仓库 / URL / 路径 | `vibe-dsf`（小写连字符，仅作标识符） |
-| 禁用 | `VibeDsf`、`VIBE DSF`（缺中点）、把仓库名当产品名 |
+| 产品正式名 | **VIBE·FLOW**（中点 U+00B7，全大写） |
+| 画面水印 | `@VIBE·FLOW`（`palette.json → brand.watermark`） |
+| 仓库 / URL / 路径 | `vibeflow`（小写连字符，仅作标识符） |
+| 禁用 | `VibeFlow`、`VIBE FLOW`（缺中点 / 空格替代）、`VIBEFLOW`（无中点）、把仓库名当产品名 |
 
 ## 二、定位与口径
 
@@ -58,7 +58,7 @@
 | P2 Frame mark | 胶片帧标记 | 圆角外框 + 内框 + 时间线（3 条）+ 强调命中圆点 + 强调下划线 |
 | P3 Accent sweep | 强调扫线 | 一次性 accent 下划线（**禁循环动画**，与全项目「去晃动」纪律一致） |
 | P4 Light band | 光带 | 横向 accent 渐变带（0→0.14→0），用于分隔与氛围 |
-| P5 Wordmark | 字标 | `VIBE·DSF`（accent 中点）+ 副标，固定字距，不可拆行 |
+| P5 Wordmark | 字标 | `VIBE·FLOW`（accent 中点）+ 副标，固定字距，不可拆行 |
 | P6 Lockup | 组合 | mark + wordmark + 副标 的标准排布 |
 
 mark 几何以 `brand/logo.svg` 的 108 框为基准（外框 rx18 / 内框 rx8 / 时间线笔宽 2.5 /
@@ -73,7 +73,7 @@ mark 几何以 `brand/logo.svg` 的 108 框为基准（外框 rx18 / 内框 rx8 
 | `brand/favicon.svg` | 站点图标 / 头像 | ≥24px |
 | `brand/icon.svg` | 透明底 mark（叠在照片 / 视频上的纯字形） | ≥24px |
 | `brand/wordmark.svg` | 纯字标（页脚 / 页眉，mark 已在别处出现时） | 字标高度 ≥16px |
-| `brand/watermark.svg` | 成片角标 `@VIBE·DSF`，对应 `palette.json → brand.watermark` | 原尺寸使用 |
+| `brand/watermark.svg` | 成片角标 `@VIBE·FLOW`，对应 `palette.json → brand.watermark` | 原尺寸使用 |
 | `brand/patterns.svg` | 设计模式品牌板（6 模式图例 + 色板） | 原尺寸使用 |
 | `brand/social-x.svg` | X / Twitter 分享卡（1200×675） | 原尺寸使用 |
 | `brand/social-yt.svg` | YouTube 缩略图（1280×720，含播放按钮暗示） | 原尺寸使用 |
@@ -86,7 +86,7 @@ mark 四周留白 ≥0.25×mark 宽度。深底版 logo **不可直接放浅底*
 ## 七、禁用示例
 
 - 改强调色、加第二个强调色、渐变文字、投影、拉伸变形、旋转字标
-- 把「VIBE·DSF」拆成两行或改变字母间距
+- 把「VIBE·FLOW」拆成两行或改变字母间距
 - 在数字上做循环动画（与全项目的「去晃动」纪律冲突）
 - 把样片 QA 分数当成服务 SLA 写在对外材料里
 - 把冻结档案（旧方法论、额外画风、归档样片）包装成当前对外承诺

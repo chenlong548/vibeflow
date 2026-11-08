@@ -66,7 +66,7 @@ README.md ──(① PROMPT-PROJECT.md × 任何 LLM)
 > **运动源铁律**（详见 blocks/README.md）：细线/微脉冲凑不够 QA 的 0.35%/帧变化底线，
 > 长场景必须配大面积匀速平移的光带；入场淡入 >0.4s 会被计成连续"硬切"。
 
-## 五、首条实测：vibe-dsf 自举（50s，projects/project-vibe-dsf/）
+## 五、首条实测：vibeflow 自举（50s，projects/project-vibeflow/）
 
 用项目线介绍项目线自己。数字全部来自本仓库真实产物（0.13s/帧、QA 9.5/10、11 组检查）。
 

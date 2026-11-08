@@ -1,10 +1,14 @@
-# 配齐清单（只服务 flash）
+# 配齐清单（历史：flash 专属）
+
+> **现状（v1.9.0）**：主模型已可在 `.env` 自定义任意 OpenAI 兼容模型（见 `.env.example`），
+> 本档案为早期 flash 调优记录，保留作参考，不再代表唯一路径。
 
 > **历史档案（2026-10）**：这里记录当时的能力配齐决策与零插件结论，保留作为设计溯源。
 > 当前架构、能力状态与对外口径以 [README.md](../README.md) 和
 > [docs/16-PROJECT-SUMMARY.md](16-PROJECT-SUMMARY.md) 为准；商业化见 [docs/22](22-COMMERCIAL.md)。
 > 判定标准：**每一域都必须有一个"在这台机器上真能跑"的实现**，不能是"别人有"。
 > 本清单里的所有条目都只服务 `deepseek-flash`（DeepSeek-V4.1-Flash-1017）。
+> 现在主模型可在 `.env` 自定义任意 OpenAI 兼容模型，下列 flash 策略保留作参考。
 
 ## 一、六个能力域
 

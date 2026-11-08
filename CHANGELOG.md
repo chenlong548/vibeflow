@@ -4,13 +4,27 @@
 **纪律：每一次推送到 GitHub 都递增版本 + 在本文件记录 + 打同名 tag。**
 版本判定：新功能/工具增强 → MINOR；修 bug/文档同步 → PATCH；破坏性改动（渲染契约、plan 格式不兼容）→ MAJOR。
 
+## [1.9.0] - 2026-11-08
+
+### Changed — 项目更名与自定义模型接口
+- 项目更名为 **Vibeflow**（品牌标识 `VIBE·FLOW`，仓库 / URL 标识符 `vibeflow`）：
+  原 `VIBE·DSF` 全量替换为 `VIBE·FLOW`，仓库地址改为 `chenlong548/vibeflow`，
+  样片目录 `projects/project-vibe-dsf` 重命名为 `projects/project-vibeflow`。
+- 主模型不再锁死 DeepSeek-Flash：**自定义 LLM 接口**落地。新增 `.env.example`
+  （`LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` + 分档覆盖），`scripts/env.ps1`
+  改为读取 `.env` 并注入本工具链，可接入绝大多数「可识别图像」的文本模型
+  （OpenAI 兼容视觉模型走 OpenAI→Anthropic 网关，如 litellm / one-api）。
+- `.env` 加入 `.gitignore`（密钥不入库），`.env.example` 入库作模板。
+- `docs/00-INVENTORY.md` 标注为主模型可自定义后的历史 flash 专属档案。
+- `site/check.py` 品牌正则同步为 `VIBE·FLOW`。
+
 ## [1.8.0] - 2026-11-07
 
 ### Added — 品牌设计模式与扩展资产
 - 定义 6 个可复用**品牌设计模式**（P1 深空场 / P2 胶片帧标 / P3 强调扫线 / P4 光带 /
   P5 字标 / P6 组合），所有资产从同一套模式与 deep-space 令牌生成，不另造视觉语言。
 - 新增 6 个品牌资产：`brand/icon.svg`（透明 mark）、`brand/wordmark.svg`（纯字标）、
-  `brand/watermark.svg`（成片角标 `@VIBE·DSF`，对应 `palette.json → brand.watermark`）、
+  `brand/watermark.svg`（成片角标 `@VIBE·FLOW`，对应 `palette.json → brand.watermark`）、
   `brand/patterns.svg`（设计模式品牌板）、`brand/social-x.svg`（1200×675 分享卡）、
   `brand/social-yt.svg`（1280×720 缩略图，含播放按钮暗示）。
 - `brand/BRAND.md` 新增「设计模式」章节与模式表、资产清单扩到 10 项，并写清「新增资产只复用
@@ -97,7 +111,7 @@
 - `README.md` / `README.en.md` 重写为商业级双语门面：删除过时内容（「只服务 flash」、
   「TTS 未做」、重构前目录树、个人口径的「7 步停下来确认」、2026-10 的具体价格），
   换成当前架构、真实实测数据、样片 QA 分数、商业化入口与合规链接。
-- 样片分数按实片 `qa.json` 校准：project-vibe-dsf 8.5 → 9.1、区间 8.8–9.5（站点同步）。
+- 样片分数按实片 `qa.json` 校准：project-vibeflow 8.5 → 9.1、区间 8.8–9.5（站点同步）。
 - 全库同步：CONTRIBUTING 目录地图与验证流程、docs/00 历史档案标注、docs/16 架构图、
   `setup.ps1` 体检表、CI 加站点自检。
 
@@ -155,7 +169,7 @@
   历史漏检场景与浅底全帧误报复现），0.3s 跑完，已接入 CI。
 
 ### Verified
-- 实片同帧对比：demo-hook-compound **8.8 = 8.8**、project-vibe-dsf **9.1 = 9.1**（11 项逐项相同）；
+- 实片同帧对比：demo-hook-compound **8.8 = 8.8**、project-vibeflow **9.1 = 9.1**（11 项逐项相同）；
   异常峰值 0.0% / 0.02%，门槛 0.3%，余量 15 倍以上。
 - 真实 PNG 端到端注入：30 帧序列第 15 帧左边带贴 deep teal 暗块 → v4 报溢出 @0.47s
   （异常峰值 5.029%、安全区 5/10），`--legacy-edge` / `--v2` 均 0 帧（安全区 10/10）。

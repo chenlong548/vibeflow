@@ -14,7 +14,7 @@
 | demo-hook-compound | SCENE-WRITER 全自动 | 11.4s | 8.8 | 首条全自动 + 人声 |
 | paper-shannon1948 | PAPER2VIDEO 全自动 | 23.8s | 9.5 | 首条论文片 |
 | **paper-shannon-deep** | PAPER2VIDEO 章节化 | **180s** | **9.2** | 长视频版（10 场景 32 句旁白） |
-| **project-vibe-dsf** | **PROJECT2VIDEO 全自动** | **50s** | **9.1** | 首条项目介绍片（自举） |
+| **project-vibeflow** | **PROJECT2VIDEO 全自动** | **50s** | **9.1** | 首条项目介绍片（自举） |
 
 ## 二、系统架构
 

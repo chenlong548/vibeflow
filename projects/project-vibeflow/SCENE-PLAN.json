@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "meta": {
-    "topic": "vibe-dsf · 项目介绍",
-    "hook_title": "VIBE·DSF · PIPELINE",
+    "topic": "vibeflow · 项目介绍",
+    "hook_title": "VIBE·FLOW · PIPELINE",
     "duration": 50.0,
     "fps": 30,
     "bpm": 126,
@@ -27,7 +27,7 @@
       "term_accent": "#5ed3b8",
       "term_amber": "#e3b341"
     },
-    "watermark": "@VIBE·DSF"
+    "watermark": "@VIBE·FLOW"
   },
   "scenes": [
     {
@@ -73,7 +73,7 @@
           "t_in": 4.5
         },
         {
-          "text": "github.com/chenlong548/vibe-dsf",
+          "text": "github.com/chenlong548/vibeflow",
           "x": 0.58,
           "y": 0.66,
           "font": 20,
@@ -130,7 +130,7 @@
           "t_in": 8.0
         },
         {
-          "text": "vibe-dsf · 自动化知识视频流水线",
+          "text": "vibeflow · 自动化知识视频流水线",
           "x": 0.42,
           "y": 0.70,
           "font": 20,
@@ -298,10 +298,10 @@
           "cy": 0.46,
           "w": 1200,
           "area_pct": 0.14,
-          "repo": "chenlong548/vibe-dsf",
+          "repo": "chenlong548/vibeflow",
           "lang": "JavaScript · Python",
           "chips": ["流水线", "积木库", "QA 门禁"],
-          "install": "git clone github.com/chenlong548/vibe-dsf",
+          "install": "git clone github.com/chenlong548/vibeflow",
           "t_in": 45.9,
           "t_star": 46.6
         }

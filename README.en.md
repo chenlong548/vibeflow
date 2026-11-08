@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="brand/logo.svg" width="420" alt="VIBE·DSF — knowledge video pipeline"/>
+<img src="brand/logo.svg" width="420" alt="VIBE·FLOW — knowledge video pipeline"/>
 
 **A knowledge-video pipeline for solo creators — no QA pass, no film**
 
-[简体中文](README.md) | [Live site](site/index.html) · **v1.8.0** · [Changelog](CHANGELOG.md) · [MVP definition](docs/24-MVP.md) · [Roadmap](docs/25-ROADMAP.md) · [Who it's for](docs/22-COMMERCIAL.md)
+[简体中文](README.md) | [Live site](site/index.html) · **v1.9.0** · [Changelog](CHANGELOG.md) · [MVP definition](docs/24-MVP.md) · [Roadmap](docs/25-ROADMAP.md) · [Who it's for](docs/22-COMMERCIAL.md)
 
 `Free · MIT` · `QA ≥ 8 hard gate` · `Zero paid dependencies` · `Self-hosted`
 
@@ -12,7 +12,7 @@
 
 ---
 
-# VIBE·DSF
+# VIBE·FLOW
 
 > We turn one line into a release-ready 1080p knowledge video: frames drawn by code,
 > audio synthesised deterministically, and a **pixel-level QA gate** that decides
@@ -114,6 +114,12 @@ block this release.
 Requires Python 3.10+ (`numpy` / `pillow` / `edge-tts`), Node 20+, a local Chrome, and ffmpeg.
 No GPU and no paid connector required.
 
+> **Custom model endpoint**: the main model is no longer locked to DeepSeek-Flash.
+> Copy `.env.example` to `.env` and set `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL`
+> to plug in almost any image-capable text model (OpenAI-compatible vision models go
+> through an OpenAI→Anthropic gateway such as litellm / one-api).
+> `scripts/env.ps1` loads `.env` into the toolchain. See `.env.example`.
+
 <details>
 <summary>Step-by-step commands (when a single stage needs manual control)</summary>
 
@@ -160,7 +166,7 @@ as a pre-publish check.
 | demo-hook-compound | SCENE-WRITER + narration + SFX | 11.43s | 8.8 |
 | paper-shannon1948 | PAPER2VIDEO explainer | 23.81s | 9.5 |
 | paper-shannon-deep | PAPER2VIDEO long form | 180s | 9.2 |
-| project-vibe-dsf | PROJECT2VIDEO self-showcase | 50s | 9.1 |
+| project-vibeflow | PROJECT2VIDEO self-showcase | 50s | 9.1 |
 
 All five run on **one pipeline** — only the input source and runtime differ (8–180s);
 they are not five product lines. Scores come from each film's `qa.json` on the actual

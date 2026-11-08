@@ -24,7 +24,7 @@
       "ink":   "#EAEAF2",                  // 主文字
       "gray":  "#8A8AA0"                   // 辅助灰（L3 标注）
     },
-    "watermark": "@VIBE·DSF"               // 缺省时 build_html 取品牌契约 brand.watermark
+    "watermark": "@VIBE·FLOW"               // 缺省时 build_html 取品牌契约 brand.watermark
   },
 
   "scenes": [                              // 时间轴必须无缝全覆盖 [0, duration]

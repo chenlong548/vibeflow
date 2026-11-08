@@ -3,7 +3,7 @@
 ## 目录地图
 
 ```
-vibe-dsf/
+vibeflow/
 ├── pipeline/                  # 核心管线（一键入口：run_all.ps1）
 │   ├── run_all.ps1            # 五阶段一键流水线：渲染→QA闸→BGM→旁白混音→合成（exit 0-4 定位失败段；每次产出执行报告）
 │   ├── review.mjs             # 静帧评审页生成器：场景网格 + A/B 对比 + QA 病灶叠加（docs/10 #9）
@@ -24,7 +24,7 @@ vibe-dsf/
 │   ├── demo-hook-compound/    # 正式样片（QA 8.8）
 │   ├── paper-shannon1948/     # 论文线样片（QA 9.5）
 │   ├── paper-shannon-deep/    # 论文深讲长片（QA 9.2）
-│   ├── project-vibe-dsf/      # 项目线样片（QA 9.1）
+│   ├── project-vibeflow/      # 项目线样片（QA 9.1）
 │   ├── _probe/                # 回归夹具（CI 冒烟测试用，勿动）
 │   └── _archive/              # 实验归档（保留回退，不再维护）
 ├── brand/                     # 品牌资产：logo.svg / favicon.svg / BRAND.md（对外单一真相）

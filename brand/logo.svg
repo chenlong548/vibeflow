@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120" role="img" aria-label="VIBE·DSF — automated knowledge video pipeline">
-  <title>VIBE·DSF</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120" role="img" aria-label="VIBE·FLOW — automated knowledge video pipeline">
+  <title>VIBE·FLOW</title>
   <defs>
     <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#141026"/>
@@ -15,6 +15,6 @@
   <path d="M30 88 H58" stroke="#E8A87C" stroke-width="3" stroke-linecap="round"/>
 
   <!-- wordmark -->
-  <text x="140" y="62" fill="#EAEAF2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="2.5">VIBE<tspan fill="#E8A87C">·</tspan>DSF</text>
+  <text x="140" y="62" fill="#EAEAF2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="2.5">VIBE<tspan fill="#E8A87C">·</tspan>FLOW</text>
   <text x="142" y="90" fill="#8A8AA0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="500" letter-spacing="3.4">KNOWLEDGE VIDEO PIPELINE</text>
 </svg>

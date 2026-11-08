@@ -103,7 +103,7 @@ def main():
             errors.append(f"缺少配套资产 {name}")
 
     # 5. 站点不写死版本：少一处同步负担，版本守卫统一交给 scripts/verify.py
-    if re.search(r"VIBE·DSF\s*·\s*v\d+\.\d+\.\d+", text):
+    if re.search(r"VIBE·FLOW\s*·\s*v\d+\.\d+\.\d+", text):
         errors.append("页脚写死了版本号；版本只由 VERSION / CHANGELOG / README 双语维护")
 
     if errors:

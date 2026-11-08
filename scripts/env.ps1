@@ -1,30 +1,49 @@
-﻿# =====================================================================
-# env.ps1 —— 把环境锁死在 flash（不给任何模型映射留余地）
-#   用法：. .\scripts\env.ps1     然后 cd 到项目目录跑 claude
-#   注意：key 自己填，不要提交到仓库
-# =====================================================================
+﻿# env.ps1 - load a custom LLM endpoint from .env into this toolchain.
+# Usage:  . .\scripts\env.ps1
+# Then cd to the project and run your agent (e.g. claude).
+# .env is not in the repo; copy .env.example to .env first.
+$ErrorActionPreference = "Stop"
 
-$env:ANTHROPIC_BASE_URL   = "https://api.deepseek.com/anthropic"
-$env:ANTHROPIC_AUTH_TOKEN = "<在这里填你的 DeepSeek API Key>"
+$root    = Split-Path -Parent $PSScriptRoot
+$envFile = Join-Path $root ".env"
 
-# ---- 四个模型位，全部锁成 flash ----
-# 官方默认映射是 claude-opus* -> v4-pro；你一触发 opus 档就会悄悄换模型，
-# 风格和坏习惯全变。这里逐个覆盖，杜绝"我也没注意换了模型"。
-$env:ANTHROPIC_MODEL                 = "deepseek-flash[1m]"
-$env:ANTHROPIC_DEFAULT_OPUS_MODEL    = "deepseek-flash[1m]"
-$env:ANTHROPIC_DEFAULT_SONNET_MODEL  = "deepseek-flash[1m]"
-$env:ANTHROPIC_DEFAULT_HAIKU_MODEL   = "deepseek-flash"
-$env:CLAUDE_CODE_SUBAGENT_MODEL      = "deepseek-flash"
+if (-not (Test-Path $envFile)) {
+    Write-Error ".env not found at $envFile. Copy .env.example to .env and set LLM_BASE_URL / LLM_API_KEY / LLM_MODEL."
+    exit 1
+}
 
-# ---- flash 专用参数 ----
-$env:CLAUDE_CODE_EFFORT_LEVEL        = "max"       # 思考拉满（关掉会明显变笨）
-$env:CLAUDE_CODE_AUTO_COMPACT_WINDOW = "786432"    # 768K 压缩窗口，避免中途丢分镜表
+$map = @{}
+Get-Content $envFile -Encoding UTF8 | ForEach-Object {
+    $line = $_.Trim()
+    if ($line -eq "" -or $line.StartsWith("#")) { return }
+    if ($line -match '^([A-Za-z_][A-Za-z0-9_]*)=(.*)$') {
+        $map[$matches[1]] = $matches[2].Trim().Trim('"').Trim("'")
+    }
+}
 
-Write-Host "环境已锁定到 flash：" -ForegroundColor Green
+$base  = $map["LLM_BASE_URL"]
+$key   = $map["LLM_API_KEY"]
+$model = $map["LLM_MODEL"]
+
+if (-not $base -or -not $key -or -not $model) {
+    Write-Error "LLM_BASE_URL, LLM_API_KEY and LLM_MODEL are all required in .env."
+    exit 1
+}
+
+# Map the custom endpoint to the Anthropic-compatible gateway vars this
+# toolchain consumes. For OpenAI-compatible models, put an OpenAI->Anthropic
+# gateway URL in LLM_BASE_URL.
+$env:ANTHROPIC_BASE_URL             = $base
+$env:ANTHROPIC_AUTH_TOKEN           = $key
+$env:ANTHROPIC_MODEL                = $model
+$env:ANTHROPIC_DEFAULT_OPUS_MODEL   = if ($map["LLM_OPUS_MODEL"])    { $map["LLM_OPUS_MODEL"]    } else { $model }
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = if ($map["LLM_SONNET_MODEL"])  { $map["LLM_SONNET_MODEL"]  } else { $model }
+$env:ANTHROPIC_DEFAULT_HAIKU_MODEL  = if ($map["LLM_HAIKU_MODEL"])   { $map["LLM_HAIKU_MODEL"]   } else { $model }
+$env:CLAUDE_CODE_SUBAGENT_MODEL     = if ($map["LLM_SUBAGENT_MODEL"]) { $map["LLM_SUBAGENT_MODEL"] } else { $model }
+
+if ($map["LLM_EFFORT"]) { $env:CLAUDE_CODE_EFFORT_LEVEL = $map["LLM_EFFORT"] }
+
+Write-Host "LLM endpoint ready:" -ForegroundColor Green
 Write-Host "  BASE_URL = $env:ANTHROPIC_BASE_URL"
 Write-Host "  MODEL    = $env:ANTHROPIC_MODEL"
-Write-Host "  OPUS位   = $env:ANTHROPIC_DEFAULT_OPUS_MODEL  (已覆盖官方默认的 v4-pro 映射)"
-Write-Host "  effort   = $env:CLAUDE_CODE_EFFORT_LEVEL"
-Write-Host ""
-Write-Host "下一步：cd 到项目目录，执行 claude" -ForegroundColor Cyan
-Write-Host "开工前先让它读：docs/03-FLASH-PLAYBOOK.md + skills/vibe-film-ds/SKILL.md" -ForegroundColor DarkGray
+Write-Host "Next: cd to the project and run your agent." -ForegroundColor Cyan
